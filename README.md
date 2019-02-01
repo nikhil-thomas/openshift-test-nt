@@ -11,6 +11,15 @@ openshift test solutions (nikhil thomas)
 
 4. [Q4. Create a pod and secret (username and password), inject those secrets as env in your pod (logic of your choice)](/q4/README.md)
 
+5. Q5. Create a deployment which has init container, init container should create some file and which should be available in main pod. (logic of your choice)
+
+6. [Q6. Create a pod with non-persistent volume](/q6/README.md)
+
+7. Create a pod and use NodePort service to expose it
+
+8. Find template named cakephp-mysql-persistent and deploy it and export the yamls
+
+9. Write a job which can runs 4 pods in parallel (logic of your choice)
 
 ## theory
 
