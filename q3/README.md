@@ -92,6 +92,7 @@ output:
 ```
 route "q3-app" exposed
 ```
+### get routes
 ```
 oc get routes
 ```
