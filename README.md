@@ -15,7 +15,7 @@ openshift test solutions (nikhil thomas)
 
 6. [Q6. Create a pod with non-persistent volume](/q6/README.md)
 
-7. Create a pod and use NodePort service to expose it
+7. [Create a pod and use NodePort service to expose it](/q7/README.md)
 
 8. Find template named cakephp-mysql-persistent and deploy it and export the yamls
 
