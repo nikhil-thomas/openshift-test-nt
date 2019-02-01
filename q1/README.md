@@ -16,7 +16,7 @@ You can add applications to this project with the 'new-app' command. For example
 
 create new app to deploy nodejs-ex
 ```
-oc new-app --name q1-app https://github.com/sclorg/nodejs-ex
+$ oc new-app --name q1-app https://github.com/sclorg/nodejs-ex
 ```
 
 output:
@@ -45,7 +45,7 @@ output:
 
 expose q1-app service to create a route
 ```
-oc expose svc/q1-app
+$ oc expose svc/q1-app
 ```
 
 output:
@@ -55,7 +55,7 @@ route "q1-app" exposed
 
 get route
 ```
-oc get routes
+$ oc get routes
 ```
 output:
 ```
@@ -65,7 +65,7 @@ q1-app    q1-app-q1.192.168.99.100.nip.io             q1-app     8080-tcp       
 
 test route with curl
 ```
-curl q1-app-q1.192.168.99.100.nip.io
+$ curl q1-app-q1.192.168.99.100.nip.io
 ```
 output:
 ```
@@ -102,4 +102,13 @@ output:
 </section>
 </body>
 </html>
+```
+
+clean up
+```
+$ oc delete project q1
+```
+output:
+```
+
 ```
