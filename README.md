@@ -21,7 +21,9 @@ openshift test solutions (nikhil thomas)
 **Pod:** is the smallest deployable resource/object in kubernetes/openshift. A Pod has one or more containers. Each Pod will have a unique IP within a cluster. Containers in a Pod will share POD IP.
 
 **Deployment:** defines a deployment startegy/lifecycle for a set of Pods under a replication controller. In general, each deploymet can be considered as individual application services in a cluster.
+
 ---
+
 ### Buildconfig and S2I
 
 A buildconfig is a resource which describes the build strategy of a application. It can use different build strategies such as docker, S2I, pipeline etc.
@@ -33,11 +35,15 @@ S2I is a process/tool to build a container image without writing a conventional 
 * Final application image; the output of S2I process is the application container image
 
 (S2I can also be used as an independent too to build images)
+
 ---
+
 ### Imagestream
 
 An Imagestream is mechanism to associate a short/convinient name to the hash of an image within openshift. Imagestreams are refernces to an image in an external registry or an image in an internal registry or another image stream. At any point in time an imagestream points to an image has (not an image tag). Hence, imagestreams ensures that expected/right images are used by safegaurding against ambigous tag updates (eg: latest, latest release or latest build ?)
+
 ---
+
 ### Liveness Probes and Readiness Probes
 
 **Readiness probes:** is a mechanism to ensure that a pod is ready to accept load. If a pod doesnot respond witha positive readiness check traffic will not be routed to it.
@@ -45,4 +51,5 @@ An Imagestream is mechanism to associate a short/convinient name to the hash of 
 **Liveness probes:** is a mechanism to ensure that a pod is capable of processing load. If a pod fails liveness check no more traffic is routed to it and it will be killed.
 
 **note:** both liveness probes and readiness probes can be implemented using HTTP-API-endpoints or HTTP connection response or TCP sockets, 
+
 ---
