@@ -1,8 +1,8 @@
 # Q3. Create a pod and configmap (of some file), use configmap as a volume (logic of your choice)
 
-create project q3
+### create project q3
 
-create a simple php app: https://github.com/nikhil-thomas/openshift-php-helloworld
+### create a simple php app: https://github.com/nikhil-thomas/openshift-php-helloworld
 
 ```
 oc new-app --name q3-app https://github.com/nikhil-thomas/openshift-php-helloworld.git
@@ -22,7 +22,7 @@ output:
     Run 'oc status' to view your app.
 ```
 
-create a configmap
+### create a configmap
 ```
 $ oc create configmap greeting \
 > --from-literal message="Hello World from file"
@@ -32,7 +32,7 @@ output:
 configmap "greeting" created
 ```
 
-inspect configmap greeting
+### inspect configmap greeting
 ```
 oc describe cm/greeting
 ```
@@ -51,7 +51,7 @@ Hello World from file
 Events:  <none>
 ```
 
-mount config map as a file in deployment config
+### mount config map as a file in deployment config
 ```
 $ oc edit dc/q3-app
 ```
@@ -76,7 +76,7 @@ output:
 ```
 deploymentconfig "q3-app" edited
 ```
-re-deploy q3-app
+### re-deploy q3-app
 ```
 oc rollout latest dc/q3-app
 ```
@@ -84,7 +84,7 @@ output:
 ```
 deploymentconfig "q3-app" rolled out
 ```
-expose q3-app service
+### expose q3-app service
 ```
 oc expose svc/q3-app
 ```
@@ -100,7 +100,7 @@ output:
 q3-app    q3-app-q3.192.168.99.100.nip.io             q3-app     8080-tcp                 None
 ```
 
-fetch mounted file path uisng
+### fetch mounted file path uisng
 ```
 curl q3-app-q3.192.168.99.100.nip.io/cm-path/message
 ```
@@ -112,3 +112,4 @@ Hello World from file
 ### Reference
 
 * https://docs.openshift.com/enterprise/3.2/dev_guide/configmaps.html#configmaps-use-case-consuming-in-volumes
+ 
