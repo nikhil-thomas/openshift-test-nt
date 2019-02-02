@@ -15,11 +15,11 @@ openshift test solutions (nikhil thomas)
 
 6. [Q6. Create a pod with non-persistent volume](/q6/README.md)
 
-7. [Create a pod and use NodePort service to expose it](/q7/README.md)
+7. [Q7. Create a pod and use NodePort service to expose it](/q7/README.md)
 
-8. [Find template named cakephp-mysql-persistent and deploy it and export the yamls](/q8/README.md)
+8. [Q8. Find template named cakephp-mysql-persistent and deploy it and export the yamls](/q8/README.md)
 
-9. [Write a job which can runs 4 pods in parallel (logic of your choice)](/q9/README.md)
+9. [Q9. Write a job which can runs 4 pods in parallel (logic of your choice)](/q9/README.md)
 
 ## theory
 
