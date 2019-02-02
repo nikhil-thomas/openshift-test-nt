@@ -1,6 +1,6 @@
 # Q1. Deploy https://github.com/sclorg/nodejs-ex on openshift in q1 namespace/project
 
-create q1 project/namespace
+### create q1 project/namespace
 ```
 $ oc new-project q1
 ```
@@ -14,7 +14,7 @@ You can add applications to this project with the 'new-app' command. For example
 
 ```
 
-create new app to deploy nodejs-ex
+### create new app to deploy nodejs-ex
 ```
 $ oc new-app --name q1-app https://github.com/sclorg/nodejs-ex
 ```
@@ -43,7 +43,7 @@ output:
     Run 'oc status' to view your app.
 ```
 
-expose q1-app service to create a route
+### expose q1-app service to create a route
 ```
 $ oc expose svc/q1-app
 ```
@@ -53,7 +53,7 @@ output:
 route "q1-app" exposed
 ```
 
-get route
+### get route
 ```
 $ oc get routes
 ```
@@ -63,7 +63,7 @@ NAME      HOST/PORT                         PATH      SERVICES   PORT       TERM
 q1-app    q1-app-q1.192.168.99.100.nip.io             q1-app     8080-tcp                 None
 ```
 
-test route with curl
+### test route with curl
 ```
 $ curl q1-app-q1.192.168.99.100.nip.io
 ```
@@ -104,7 +104,7 @@ output:
 </html>
 ```
 
-clean up
+### clean up
 ```
 $ oc delete project q1
 ```
