@@ -47,7 +47,7 @@ S2I is a process/tool to build a container image without writing a conventional 
 
 ### Imagestream
 
-An Imagestream is mechanism to associate a short/convinient name to the hash of an image within openshift. Imagestreams are refernces to an image in an external registry or an image in an internal registry or another image stream. At any point in time an imagestream points to an image has (not an image tag). Hence, imagestreams ensures that expected/right images are used by safegaurding against ambigous tag updates (eg: latest, latest release or latest build ?)
+An Imagestream is mechanism to associate a short/convinient name to the hash of an image within openshift. Imagestreams are refernces to an image in an external registry or an image in an internal registry or another image stream. At any point in time an imagestream points to an image hash (not an image tag). Hence, imagestreams ensures that expected/right images are used by safegaurding against ambigous tag updates (eg: latest, latest release or latest build ?)
 
 ---
 
