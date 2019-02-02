@@ -110,5 +110,5 @@ $ oc delete project q1
 ```
 output:
 ```
-
+project "q1" deleted
 ```
