@@ -17,7 +17,7 @@ openshift test solutions (nikhil thomas)
 
 7. [Create a pod and use NodePort service to expose it](/q7/README.md)
 
-8. Find template named cakephp-mysql-persistent and deploy it and export the yamls
+8. [Find template named cakephp-mysql-persistent and deploy it and export the yamls](/q8/README.md)
 
 9. [Write a job which can runs 4 pods in parallel (logic of your choice)](/q9/README.md)
 
