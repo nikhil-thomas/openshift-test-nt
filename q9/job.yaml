@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: q9-job
+spec:
+  parallelism: 4
+  completions: 1
+  template:
+    metadata:
+      name: q9-template
+      labels:
+        app: q9
+    spec:
+      containers:
+      - name: sleep5
+        image: busybox
+        command: ["sh", "-c", "echo start5; sleep 5; echo stop5"]
+      - name: sleep6
+        image: busybox
+        command: ["sh", "-c", "echo start6; sleep 5; echo stop6"]
+      - name: sleep7
+        image: busybox
+        command: ["sh", "-c", "echo start7; sleep 5; echo stop7"]
+      - name: sleep8
+        image: busybox
+        command: ["sh", "-c", "echo start8; sleep 5; echo stop8"]
+      restartPolicy: Never
