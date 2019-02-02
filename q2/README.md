@@ -1,6 +1,6 @@
 # Q2. In q2 namespace, create imagestream for nodejs and deploy https://github.com/sclorg/nodejs-ex
 
-create project q2
+### create project q2
 ```
 $ oc new-project q2
 ```
@@ -15,7 +15,7 @@ You can add applications to this project with the 'new-app' command. For example
 to build a new example application in Ruby.
 ```
 
-list image streams in q2
+### list image streams in q2
 ```
 $ oc get is
 ```
@@ -24,7 +24,7 @@ output:
 no resources found.
 ```
 
-list image streams in openshift namespace and find nodejs image stream
+### list image streams in openshift namespace and find nodejs image stream
 ```
 $ oc get is -n openshift | grep nodejs
 ```
@@ -33,7 +33,7 @@ output:
 nodejs       172.30.1.1:5000/openshift/nodejs       8,8-RHOAR,latest + 4 more...   30 hours ago
 ```
 
-import nodejs image stream into project q2
+### import nodejs image stream into project q2
 ```
 $ oc import-image 172.30.1.1:5000/openshift/nodejs --confirm --insecure
 ```
@@ -61,7 +61,7 @@ latest
 ...(truncated)
 ```
 
-list is in q2 project
+### list is in q2 project
 ```
 $ oc get is
 ```
@@ -71,7 +71,7 @@ NAME      DOCKER REPO                 TAGS      UPDATED
 nodejs    172.30.1.1:5000/q2/nodejs   latest    5 seconds ago
 ```
 
-deploy app
+### deploy app
 ```
 oc new-app --name q2-app https://github.com/sclorg/nodejs-ex
 ```
@@ -97,7 +97,7 @@ output:
     Run 'oc status' to view your app.
 ```
 
-expose q2-app service to create a route
+### expose q2-app service to create a route
 ```
 $ oc expose svc/q2-app
 ```
@@ -107,7 +107,7 @@ output:
 route "q2-app" exposed
 ```
 
-get route
+### get route
 ```
 $ oc get routes
 ```
@@ -117,7 +117,7 @@ NAME      HOST/PORT                         PATH      SERVICES   PORT       TERM
 q2-app    q2-app-q2.192.168.99.100.nip.io             q2-app     8080-tcp                 None
 ```
 
-test route with curl
+### test route with curl
 ```
 $ curl q2-app-q2.192.168.99.100.nip.io
 ```
@@ -158,11 +158,11 @@ output:
 </html>
 ```
 
-clean up
+### clean up
 ```
 $ oc delete project q2
 ```
 output:
 ```
-
+project "q2" deleted
 ```
